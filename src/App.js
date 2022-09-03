@@ -1,17 +1,17 @@
 import './App.css';
+import LocationAndDate from './LocationAndDate/LocationAndDate';
 import './SearchBar/SearchBar'
 import SearchBar from './SearchBar/SearchBar';
-
-const api = {
-  key: "93afee0008cb9b8ff8daf84106c6978c",
-  base: "https://api.openweathermap.org/data/3.0"
-}
+import WeatherObject from './WeatherObject/WeatherObject';
 
 function App() {
+
   return (
     <div className="App">
       <main>
         <SearchBar />
+        <LocationAndDate />
+        <WeatherObject />
       </main>
     </div>
   );
