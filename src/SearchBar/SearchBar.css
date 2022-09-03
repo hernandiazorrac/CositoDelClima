@@ -1,0 +1,17 @@
+.searchBox{
+    padding: 50px;
+}
+
+.searchBar{
+    width: 100%;
+    display: block;
+    padding: 10px 20px;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: rgba(255,255,255, 0.5);
+    border-radius: 50px;
+    margin-top: -20px;
+    box-shadow: 0px 5px rgba(0,0,0,0.1);
+}
