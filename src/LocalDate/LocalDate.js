@@ -1,4 +1,4 @@
-const LocationAndDate = () => {
+const LocalDate = () => {
 
     const currentDate = (d) => {
         let months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
@@ -13,8 +13,10 @@ const LocationAndDate = () => {
     }
 
     return(
-        <div className="date">{currentDate(new Date())}</div>
+        <>
+            <div className="date">{currentDate(new Date())}</div>
+        </>
     )
 }
 
-export default LocationAndDate;
+export default LocalDate;

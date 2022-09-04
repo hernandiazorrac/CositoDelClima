@@ -1,5 +1,5 @@
 import './App.css';
-import LocationAndDate from './LocationAndDate/LocationAndDate';
+import LocalDate from './LocalDate/LocalDate';
 import './SearchBar/SearchBar'
 import SearchBar from './SearchBar/SearchBar';
 import WeatherObject from './WeatherObject/WeatherObject';
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <main>
         <SearchBar />
-        <LocationAndDate />
+        <LocalDate />
         <WeatherObject />
       </main>
     </div>

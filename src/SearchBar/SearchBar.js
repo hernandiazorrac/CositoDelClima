@@ -11,9 +11,11 @@ const SearchBar = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
+  const url = `${api.base}weather?q=${query}&unit=metric&APPID=${api.key}`;
+
   const search = e => {
       if(e.key === "Enter"){
-      fetch(`${api.base}weather?q=${query}&unit=metric&APPID=${api.key}`)
+      fetch(url)
           .then(res => res.json())
           .then(result => {
             setWeather(result);
@@ -21,9 +23,10 @@ const SearchBar = () => {
             console.log(result);
           })
       }
-  }
+  }  
 
 return(
+  <>
     <div className="searchBox">
       <input 
         type="text"
@@ -31,8 +34,11 @@ return(
         placeholder="Buscar ciudad..."
         onChange={evt => setQuery(evt.target.value)}
         value={query}
-        onKeyPress={search} />
+        onKeyPress={search}
+        />
     </div>
+    <h5>{weather.name}, {weather.sys.country}</h5>
+  </>
 )
 }
 
